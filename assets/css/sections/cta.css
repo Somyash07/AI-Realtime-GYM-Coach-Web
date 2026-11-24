@@ -1,0 +1,99 @@
+/* ── CTA BANNER ── */
+.cta-banner {
+  padding: 60px 0;
+}
+
+.cta-card {
+  position: relative;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  border: 1px solid var(--border-green);
+  background: var(--bg-card);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+/* Animated mesh gradient background */
+.cta-mesh {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 20% 50%, rgba(0, 255, 135, 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 60% at 80% 50%, rgba(0, 240, 255, 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 80% at 50% -20%, rgba(139, 92, 246, 0.07) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Orbs */
+.cta-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+}
+
+.cta-orb-1 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 255, 135, 0.12) 0%, transparent 70%);
+  top: -100px;
+  left: -100px;
+}
+
+.cta-orb-2 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(0, 240, 255, 0.1) 0%, transparent 70%);
+  bottom: -80px;
+  right: -80px;
+}
+
+/* Content */
+.cta-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: clamp(56px, 9vw, 96px) var(--pad-x);
+}
+
+.cta-tag {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  color: var(--clr-green);
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.cta-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4.5vw, 52px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.cta-title em {
+  font-style: normal;
+  background: var(--grad-full);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cta-desc {
+  font-size: 16px;
+  color: var(--text-secondary);
+  max-width: 480px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,129 @@
+/* ── HOW IT WORKS ── */
+.steps-wrapper {
+  position: relative;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  position: relative;
+}
+
+/* Connecting line */
+.steps-grid::before {
+  content: '';
+  position: absolute;
+  top: 52px;
+  left: calc(16.6% + 24px);
+  right: calc(16.6% + 24px);
+  height: 1px;
+  background: linear-gradient(90deg, var(--clr-green), var(--clr-cyan), var(--clr-violet));
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+/* Step Card */
+.step-card {
+  position: relative;
+  padding: 36px 32px 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-200);
+  border-radius: var(--r-lg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  overflow: hidden;
+  transition: transform 0.45s var(--ease-expo), border-color 0.35s, box-shadow 0.4s;
+}
+
+.step-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 255, 135, 0.25);
+  box-shadow: 0 20px 56px rgba(0, 0, 0, 0.6);
+}
+
+.step-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 40% at 50% -5%, rgba(0, 255, 135, 0.06) 0%, transparent 65%);
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+
+.step-card:hover::after {
+  opacity: 1;
+}
+
+/* Step Number */
+.step-number-wrap {
+  position: relative;
+  margin-bottom: 20px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--r-sm);
+  background: rgba(0, 255, 135, 0.06);
+  border: 1px solid rgba(0, 255, 135, 0.15);
+}
+
+.step-number {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--clr-green);
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+/* Step content */
+.step-content {
+  position: relative;
+  z-index: 1;
+}
+
+.step-card h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+  letter-spacing: -0.015em;
+}
+
+.step-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* Step indicator dot at bottom */
+.step-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: var(--grad-green-cyan);
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+
+.step-card:hover .step-indicator {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps-grid::before {
+    display: none;
+  }
+}

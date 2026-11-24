@@ -1,0 +1,73 @@
+/* ── CUSTOM CURSOR ── */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  pointer-events: none;
+}
+
+/* Dot — JS sets translate3d position, pseudo handles visual */
+.cursor-dot {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  will-change: transform;
+}
+
+.cursor-dot::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--clr-cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--clr-cyan);
+  transform-origin: center;
+  transition: transform 0.2s var(--ease-spring), background 0.2s, box-shadow 0.2s;
+}
+
+/* Ring — JS sets translate3d position, pseudo handles visual */
+.cursor-ring {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  will-change: transform;
+}
+
+.cursor-ring::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1.5px solid rgba(0, 240, 255, 0.35);
+  border-radius: 50%;
+  transform-origin: center;
+  transition: transform 0.3s var(--ease-spring), border-color 0.25s, opacity 0.25s;
+}
+
+/* Hover — scale via pseudo, no layout thrash */
+body.cursor-hover .cursor-dot::before {
+  transform: scale(1.6);
+  background: var(--clr-green);
+  box-shadow: 0 0 12px var(--clr-green);
+}
+
+body.cursor-hover .cursor-ring::before {
+  transform: scale(1.55);
+  border-color: rgba(0, 255, 135, 0.5);
+}
+
+/* Click */
+body.cursor-click .cursor-dot::before {
+  transform: scale(2);
+  background: var(--clr-green);
+  box-shadow: 0 0 18px var(--clr-green);
+}
+
+body.cursor-click .cursor-ring::before {
+  transform: scale(0.6);
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .cursor { display: none; }
+}

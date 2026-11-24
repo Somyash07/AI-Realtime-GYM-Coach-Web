@@ -1,0 +1,132 @@
+/* ── DEMO / VIDEO SHOWCASE ── */
+.video-showcase {
+  max-width: 980px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Terminal Window */
+.video-terminal {
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-300);
+  background: #000;
+  box-shadow: var(--shadow-xl), 0 0 80px rgba(0, 0, 0, 0.9);
+}
+
+/* Title Bar */
+.terminal-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: rgba(10, 11, 18, 0.95);
+  border-bottom: 1px solid var(--border-200);
+}
+
+.terminal-dots {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.term-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: block;
+}
+
+.term-red { background: #FF5F57; }
+.term-yellow { background: #FFBD2E; }
+.term-green { background: #28CA42; }
+
+.terminal-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--clr-green);
+}
+
+.hud-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--clr-green);
+  box-shadow: 0 0 6px var(--clr-green);
+  animation: status-blink 1.2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+.terminal-info {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+
+/* Video Frame */
+.video-frame {
+  position: relative;
+}
+
+.video-frame video {
+  width: 100%;
+  max-height: 560px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Corner decorations */
+.video-corner {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.video-corner-tl {
+  top: 12px;
+  left: 12px;
+  border-top: 2px solid var(--clr-green);
+  border-left: 2px solid var(--clr-green);
+}
+
+.video-corner-tr {
+  top: 12px;
+  right: 12px;
+  border-top: 2px solid var(--clr-green);
+  border-right: 2px solid var(--clr-green);
+}
+
+.video-corner-bl {
+  bottom: 12px;
+  left: 12px;
+  border-bottom: 2px solid var(--clr-cyan);
+  border-left: 2px solid var(--clr-cyan);
+}
+
+.video-corner-br {
+  bottom: 12px;
+  right: 12px;
+  border-bottom: 2px solid var(--clr-cyan);
+  border-right: 2px solid var(--clr-cyan);
+}
+
+/* Ambient glow below video */
+.video-ambient-glow {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 100px;
+  background: radial-gradient(ellipse, rgba(0, 240, 255, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+  filter: blur(20px);
+}

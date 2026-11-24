@@ -1,0 +1,64 @@
+/* ── PRELOADER ── */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--bg-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preloader-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 280px;
+}
+
+.preloader-logo {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3.5vw, 32px);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--text-primary);
+}
+
+.logo-accent {
+  color: var(--clr-green);
+}
+
+.preloader-status {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: var(--clr-cyan);
+  text-transform: uppercase;
+  min-height: 1.2em;
+  transition: opacity 0.3s;
+}
+
+.preloader-bar-track {
+  width: 100%;
+  height: 2px;
+  background: var(--border-200);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.preloader-bar-fill {
+  width: 0%;
+  height: 100%;
+  background: var(--grad-green-cyan);
+  border-radius: 2px;
+  transition: width 0.08s linear;
+}
+
+.preloader-pct {
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: var(--text-tertiary);
+  align-self: flex-end;
+}

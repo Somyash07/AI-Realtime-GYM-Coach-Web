@@ -1,0 +1,89 @@
+/* ── BUTTONS ── */
+
+/* Primary Button */
+.btn-primary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: #07070A;
+  background: var(--grad-green-cyan);
+  padding: 15px 30px;
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  transition: transform 0.35s var(--ease-spring), box-shadow 0.35s;
+  letter-spacing: 0.01em;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px var(--glow-green), 0 0 60px rgba(0, 240, 255, 0.1);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-primary-lg {
+  padding: 17px 36px;
+  font-size: 15px;
+}
+
+/* Shine effect */
+.btn-shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 30%, rgba(255, 255, 255, 0.35) 50%, transparent 70%);
+  transform: translateX(-100%);
+  transition: transform 0.6s var(--ease-expo);
+}
+
+.btn-primary:hover .btn-shine {
+  transform: translateX(100%);
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition: transform 0.3s var(--ease-spring);
+}
+
+.btn-primary:hover .btn-icon {
+  transform: translateX(2px);
+}
+
+/* Ghost Button */
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 15px 26px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border-200);
+  background: rgba(255, 255, 255, 0.02);
+  transition: color var(--t-base), border-color var(--t-base), background var(--t-base);
+}
+
+.btn-ghost:hover {
+  color: var(--text-primary);
+  border-color: var(--border-300);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.btn-ghost-icon {
+  transition: transform 0.3s var(--ease-spring);
+  opacity: 0.6;
+}
+
+.btn-ghost:hover .btn-ghost-icon {
+  transform: translateY(3px);
+  opacity: 1;
+}

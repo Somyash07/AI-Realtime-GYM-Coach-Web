@@ -1,0 +1,26 @@
+/* ═══════════════════════════════════════════════
+   AI GYM COACH — Modular CSS Architecture
+   Premium Dark UI + Biometric Design System
+   ═══════════════════════════════════════════════ */
+
+/* Base */
+@import url('./base/variables.css');
+@import url('./base/reset.css');
+
+/* Components */
+@import url('./components/cursor.css');
+@import url('./components/preloader.css');
+@import url('./components/nav.css');
+@import url('./components/buttons.css');
+@import url('./components/cards.css');
+
+/* Sections */
+@import url('./sections/hero.css');
+@import url('./sections/marquee.css');
+@import url('./sections/features.css');
+@import url('./sections/gallery.css');
+@import url('./sections/demo.css');
+@import url('./sections/how-it-works.css');
+@import url('./sections/cta.css');
+@import url('./sections/contact.css');
+@import url('./sections/footer.css');

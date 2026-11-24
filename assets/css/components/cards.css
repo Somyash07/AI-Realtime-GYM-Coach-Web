@@ -1,0 +1,16 @@
+/* ── SHARED CARD STYLES ── */
+
+/* Glass Card Base */
+.glass-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-200);
+  border-radius: var(--r-lg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: transform 0.4s var(--ease-expo), border-color 0.35s, box-shadow 0.35s;
+}
+
+.glass-card:hover {
+  border-color: var(--border-green);
+  box-shadow: 0 16px 48px rgba(0, 255, 135, 0.07);
+}

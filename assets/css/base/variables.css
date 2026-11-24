@@ -1,0 +1,72 @@
+/* ── DESIGN TOKENS ── */
+:root {
+  /* Backgrounds */
+  --bg-900: #07070A;
+  --bg-800: #09090D;
+  --bg-700: #0C0D16;
+  --bg-600: #101120;
+  --bg-card: rgba(14, 15, 26, 0.75);
+  --bg-glass: rgba(255, 255, 255, 0.025);
+
+  /* Accent Colors */
+  --clr-green: #00FF87;
+  --clr-cyan: #00F0FF;
+  --clr-violet: #8B5CF6;
+  --clr-amber: #F59E0B;
+
+  /* Glow Colors */
+  --glow-green: rgba(0, 255, 135, 0.18);
+  --glow-cyan: rgba(0, 240, 255, 0.18);
+  --glow-violet: rgba(139, 92, 246, 0.22);
+
+  /* Borders */
+  --border-100: rgba(255, 255, 255, 0.04);
+  --border-200: rgba(255, 255, 255, 0.08);
+  --border-300: rgba(255, 255, 255, 0.14);
+  --border-400: rgba(255, 255, 255, 0.22);
+  --border-green: rgba(0, 255, 135, 0.3);
+  --border-cyan: rgba(0, 240, 255, 0.25);
+  --border-violet: rgba(139, 92, 246, 0.3);
+
+  /* Text */
+  --text-primary: #F3F4F6;
+  --text-secondary: #9CA3AF;
+  --text-tertiary: #6B7280;
+  --text-muted: #4B5563;
+
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+
+  /* Gradients */
+  --grad-green-cyan: linear-gradient(135deg, var(--clr-green), var(--clr-cyan));
+  --grad-cyan-violet: linear-gradient(135deg, var(--clr-cyan), var(--clr-violet));
+  --grad-full: linear-gradient(135deg, var(--clr-green) 0%, var(--clr-cyan) 50%, var(--clr-violet) 100%);
+
+  /* Layout */
+  --max-w: 1280px;
+  --pad-x: clamp(20px, 4vw, 64px);
+  --section-y: clamp(80px, 10vw, 140px);
+
+  /* Radii */
+  --r-xs: 6px;
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 22px;
+  --r-xl: 32px;
+  --r-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 8px 28px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.65);
+  --shadow-xl: 0 32px 80px rgba(0, 0, 0, 0.85);
+
+  /* Transitions */
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --t-fast: 150ms;
+  --t-base: 300ms;
+  --t-slow: 600ms;
+}
