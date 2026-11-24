@@ -7,7 +7,6 @@ export function initPreloader(onComplete) {
   if (!preloader) { onComplete(); return; }
 
   const statuses = [
-    'LOADING AI MODELS',
     'CALIBRATING POSE ENGINE',
     'INITIALIZING 3D MESH',
     'LAUNCHING INTERFACE'

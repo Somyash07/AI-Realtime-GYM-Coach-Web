@@ -25,7 +25,6 @@ export function initThreeScene() {
   const nodeCount = 50;
   const positions = [];
   const colors = [];
-  const nodes = [];
 
   for (let i = 0; i < nodeCount; i++) {
     const u = Math.random();
@@ -51,7 +50,6 @@ export function initThreeScene() {
     const mesh = new THREE.Mesh(geo, mat);
     mesh.position.set(x, y, z);
     scene.add(mesh);
-    nodes.push({ mesh, originalY: y, speed: Math.random() * 0.5 + 0.3 });
   }
 
   // Connection lines
